@@ -1,0 +1,56 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-background-color: #ffffff;
+}
+
+/* Etiquetas */
+.label {
+    -fx-text-fill: #333333;
+}
+
+/* Botones modernos */
+.button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16 8 16;
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+}
+
+.button:pressed {
+    -fx-background-color: #0D47A1;
+}
+
+/* Tabla de datos */
+.table-view {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e0e0e0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 36px;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #cccccc;
+}
+
+.table-view .table-cell {
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+}
+
+/* Contenedores */
+.vbox, .hbox {
+    -fx-spacing: 15px;
+}
