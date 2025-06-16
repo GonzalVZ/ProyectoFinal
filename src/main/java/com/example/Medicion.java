@@ -1,19 +1,25 @@
 package com.example;
+
 import java.io.*;
 
+// Clase que representa una medición meteorológica y permite su serialización
 public class Medicion implements Serializable {
-    private int id;
-    private int idEstacion;
-    private String fecha;
-    private String hora;
-    private double temperatura;
-    private double precipitacion;
-    private double presion;
-    private double humedad;
 
+    // Atributos de la medición
+    private int id;                // ID único de la medición
+    private int idEstacion;        // ID de la estación asociada
+    private String fecha;          // Fecha de la medición (formato texto)
+    private String hora;           // Hora de la medición
+    private double temperatura;    // Temperatura registrada (°C)
+    private double precipitacion;  // Precipitación registrada (mm)
+    private double presion;        // Presión atmosférica (hPa)
+    private double humedad;        // Porcentaje de humedad (%)
+
+    // Constructor vacío (necesario para serialización o frameworks como JavaFX)
     public Medicion() {
     }
 
+    // Constructor copia: crea una nueva instancia duplicando otra medición
     public Medicion(Medicion m) {
         this.id = m.id;
         this.idEstacion = m.idEstacion;
@@ -25,8 +31,9 @@ public class Medicion implements Serializable {
         this.humedad = m.humedad;
     }
 
-    public Medicion(int id, int idEstacion, String fecha, String hora, double temperatura, double precipitacion,
-            double presion, double humedad) {
+    // Constructor principal con todos los campos necesarios para una medición
+    public Medicion(int id, int idEstacion, String fecha, String hora,
+                    double temperatura, double precipitacion, double presion, double humedad) {
         this.id = id;
         this.idEstacion = idEstacion;
         this.fecha = fecha;
@@ -37,12 +44,15 @@ public class Medicion implements Serializable {
         this.humedad = humedad;
     }
 
+    // Representación textual de la medición (útil para debug o listas)
     @Override
     public String toString() {
         return "Medicion [id=" + id + ", idEstacion=" + idEstacion + ", fecha=" + fecha + ", hora=" + hora
                 + ", temperatura=" + temperatura + ", precipitacion=" + precipitacion + ", presion=" + presion
                 + ", humedad=" + humedad + "]";
     }
+
+    // Getters y setters de todos los atributos
 
     public int getId() {
         return id;
